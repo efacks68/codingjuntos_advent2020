@@ -2,4 +2,4 @@
 
 This is a project for us to practice different languages together. 
 
-Also have some fun with git
+Also have some fun with github.
