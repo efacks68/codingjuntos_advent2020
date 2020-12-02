@@ -4,4 +4,4 @@ This is a project for us to practice different languages together.
 
 Also have some fun with github.
 
-LEt's see what this season has in store for us :)
+Let's see what this season has in store for us :)
