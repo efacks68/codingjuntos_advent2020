@@ -3,7 +3,7 @@ function valid_pid(id_number)
    #has to be 9 digit number to be valid
    n = match(r"[0-9]{9}",id_number)
    
-   if n == nothing
+   if (n == nothing) || (length(id_number)!=9)
       is_v = false 
    end
 
@@ -15,7 +15,7 @@ function valid_byr(year)
 
    #has to be 4 digit 1920<number<2002 
    n = match(r"[0-9]{4}",year)
-   if (n == nothing) 
+   if (n == nothing) || (length(year)!=4) 
       return is_v = false
    end       
   
@@ -32,7 +32,7 @@ function valid_iyr(year)
 
    #has to be 4 digit 2010<number<2020 
    n = match(r"[0-9]{4}",year)
-   if (n == nothing) 
+   if (n == nothing) || (length(year)!=4)
       return is_v = false
    end       
   
@@ -49,7 +49,7 @@ function valid_eyr(year)
 
    #has to be 4 digit 2020<number<2030 
    n = match(r"[0-9]{4}",year)
-   if (n == nothing) 
+   if (n == nothing) || (length(year)!=4) 
       return is_v = false
    end       
   
@@ -79,7 +79,7 @@ function valid_hcl(color)
 
    #6 characters 0-9 or a-f 
    n = match(r"[0-9a-f]{6}",color)
-   if (n == nothing) 
+   if (n == nothing) || (length(color) != 6) 
       return is_v = false
    end       
   
@@ -91,9 +91,9 @@ function valid_hgt(height)
 
    #number followed by cm  or in
    #150<height_cm<193, 59<height_in<76  
-   n = match(r"\w+(?=cm)",height)
+   n = match(r"\d+(?=cm)",height)
    if (n == nothing) 
-      n = match(r"\w+(?=in)",height)
+      n = match(r"\d+(?=in)",height)
       if (n == nothing)
          is_v = false
       else 
