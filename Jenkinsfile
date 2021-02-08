@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+//adapted from https://www.christopherrung.com/2017/05/04/slack-build-notifications/
+
 import groovy.json.JsonOutput
 //import java.util.Optional
 //import hudson.tasks.test.AbstractTestResultAction
